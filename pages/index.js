@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Project_Container from '../components/Project_Container'
+import Flair from '../components/Flair'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Flair />
       <Head>
         <title>Walter Eschenbach</title>
         <link rel="icon" href="/business_suit_icon.svg" />
@@ -24,7 +26,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-          Thank you for your time and consideration.
+        Thank you for your time and consideration.
       </footer>
     </div>
   )
