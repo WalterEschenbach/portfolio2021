@@ -30,7 +30,7 @@ const useCanvas = (draw, createLines) => {
 
         const render = () => {
             frameCount++
-            draw(context, frameCount, lines)
+            draw(context, lines)
             animationFrameId = window.requestAnimationFrame(render)
         }
         render()

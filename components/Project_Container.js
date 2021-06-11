@@ -6,7 +6,8 @@ const projects = [
     {
         link: "https://nextjs.org/docs",
         title: "Tutorial Gel",
-        description: "Find in-depth information about Next.js features and API."
+        description: "Find in-depth information about Next.js features and API.",
+        github: "https://github.com/WalterEschenbach/TutorialGel"
     },
     {
         link: "https://nextjs.org/learn",
@@ -33,7 +34,7 @@ export default class Project_Container extends Component {
         return (
             <div className={styles.grid}>
                 {projects.map(project => (
-                    <Project link={project.link} title={project.title} key={project.title} description={project.description} />))
+                    <Project link={project.link} title={project.title} key={project.title} description={project.description} githubLink={project.github} />))
                 }
             </div>
         )
