@@ -4,33 +4,68 @@ import Canvas from '../components/Canvas'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const line = {
-    x: 100,
-    y: 100,
-    length: 100,
-    dx: 5,
-    dy: 5
+
+  function randomPosition(w, h) {
+    let x = Math.floor(Math.random() * w) + 1;
+    let y = Math.floor(Math.random() * h) + 1;
+    let dy = Math.random() < 0.5 ? -1 : 1;
+    return { x, y, dy }
   }
-  function drawLine(ctx) {
-    ctx.beginPath()
-    ctx.moveTo(line.x, line.y)
-    ctx.lineTo(line.x, line.y + 200)
-    ctx.stroke()
+  function line(ctx, frameCount, k) {
+    this.ctx = ctx;
+    this.canvasWidth = ctx.canvas.scrollWidth
+    this.canvasHeight = ctx.canvas.scrollHeight
+    this.startingPosition = randomPosition(this.canvasWidth, this.canvasHeight);
+    this.x = this.startingPosition.x;
+    this.y = this.startingPosition.y;
+    this.dx = 1;
+    this.dy = this.startingPosition.dy;
+    this.length = 100;
+    this.drawLine = function () {
+      this.ctx.beginPath()
+      this.ctx.moveTo(this.x, this.y + frameCount)
+      this.ctx.lineTo(this.x, this.y + this.length + frameCount)
+      this.ctx.closePath()
+      this.ctx.strokeStyle = '#d7d7d7'
+      this.ctx.stroke()
+    };
+    this.moveLine = function (frameCount) {
+      this.y += this.dy;
+      if (this.y > this.canvasHeight) {
+        this.dy *= -1
+      } else if (this.y < -100) {
+        this.dy *= -1
+      }
+    };
+    this.logStartingPosition = function () {
+      //console.log('x:', this.startingPosition.x)
+      //console.log('y:', this.startingPosition.y)
+      console.log('canvasHeight:', this.canvasHeight)
+      console.log('this.y:', this.y)
+    }
   }
 
-  function updateLine(ctx) {
+
+  function createLines(ctx, frameCount) {
+    let lines = [];
+    for (let i = 30; i >= 0; i--) {
+      lines[i] = new line(ctx, frameCount, i)
+    }
+
+    return lines;
+  }
+
+
+  const draw = (ctx, frameCount, lines) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    // Draw Line
-    drawLine(ctx)
-    // Change Position
-    line.y += line.dy
 
-  }
+    lines.forEach((l) => {
+      l.drawLine()
+      l.moveLine()
+      l.logStartingPosition()
 
+    })
 
-
-  const draw = (ctx, frameCount) => {
-    updateLine(ctx)
   }
 
   return (
@@ -43,6 +78,7 @@ export default function Home() {
       <Canvas
         className="App-canvas"
         draw={draw}
+        createLines={createLines}
       />
       <main className={styles.main}>
 

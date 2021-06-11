@@ -5,8 +5,8 @@ import styles from '../styles/Canvas.module.css'
 
 const Canvas = props => {
 
-    const { draw, ...rest } = props
-    const canvasRef = useCanvas(draw)
+    const { draw, createLines, ...rest } = props
+    const canvasRef = useCanvas(draw, createLines)
 
     return <canvas id={styles.canvas} ref={canvasRef} {...rest} />
 }

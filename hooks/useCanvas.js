@@ -15,7 +15,7 @@ function resizeCanvas(canvas) {
     return false
 }
 
-const useCanvas = draw => {
+const useCanvas = (draw, createLines) => {
 
     const canvasRef = useRef(null)
 
@@ -26,10 +26,11 @@ const useCanvas = draw => {
         resizeCanvas(canvas);
         let frameCount = 0
         let animationFrameId
+        let lines = createLines(context, frameCount)
 
         const render = () => {
             frameCount++
-            draw(context, frameCount)
+            draw(context, frameCount, lines)
             animationFrameId = window.requestAnimationFrame(render)
         }
         render()
