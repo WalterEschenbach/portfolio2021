@@ -21,21 +21,38 @@ export default function Home() {
     this.dx = 1;
     this.dy = this.startingPosition.dy;
     this.length = 100;
+    this.vertical = (Math.random() > 0.5)
     this.drawLine = function () {
       this.ctx.beginPath()
-      this.ctx.moveTo(this.x, this.y + frameCount)
-      this.ctx.lineTo(this.x, this.y + this.length + frameCount)
+      if (this.vertical) {
+        this.ctx.moveTo(this.x, this.y + frameCount)
+        this.ctx.lineTo(this.x, this.y + this.length + frameCount)
+      } else {
+        this.ctx.moveTo(this.x + frameCount, this.y)
+        this.ctx.lineTo(this.x + this.length + frameCount, this.y)
+      }
+
       this.ctx.closePath()
       this.ctx.strokeStyle = '#d7d7d7'
       this.ctx.stroke()
     };
     this.moveLine = function (frameCount) {
-      this.y += this.dy;
-      if (this.y > this.canvasHeight) {
-        this.dy *= -1
-      } else if (this.y < -100) {
-        this.dy *= -1
+      if (this.vertical) {
+        this.y += this.dy;
+        if (this.y > this.canvasHeight) {
+          this.dy *= -1
+        } else if (this.y < -100) {
+          this.dy *= -1
+        }
+      } else {
+        this.x += this.dx;
+        if (this.x > this.canvasWidth) {
+          this.dx *= -1
+        } else if (this.x < -100) {
+          this.dx *= -1
+        }
       }
+
     };
     this.logStartingPosition = function () {
       //console.log('x:', this.startingPosition.x)
