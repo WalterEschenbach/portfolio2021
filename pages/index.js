@@ -48,7 +48,7 @@ export default function Home() {
 
   function createLines(ctx, frameCount) {
     let lines = [];
-    for (let i = 30; i >= 0; i--) {
+    for (let i = 15; i >= 0; i--) {
       lines[i] = new line(ctx, frameCount, i)
     }
 
@@ -63,7 +63,6 @@ export default function Home() {
       l.drawLine()
       l.moveLine()
       l.logStartingPosition()
-
     })
 
   }
@@ -87,8 +86,8 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Web Developer{' '}
+          <code className={styles.code}>View Projects</code>
         </p>
 
         <Project_Container />
