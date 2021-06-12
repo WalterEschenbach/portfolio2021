@@ -2,7 +2,9 @@ import Head from 'next/head'
 import { useRef, useEffect, useState } from 'react'
 import Project_Container from '../components/Project_Container'
 import Canvas from '../components/Canvas'
+import Technology from '../components/Technology'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import { ImUserTie } from 'react-icons/im'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -112,8 +114,23 @@ export default function Home() {
           <Project_Container />
         </div>
         <RiArrowDownSLine size="3rem" />
-        <div className={styles.bio} style={{ border: "1px solid red", height: "400px", width: "100%" }}>Hello World</div>
+        <div style={{ width: "100%", borderBottom: "1px solid #eaeaea", display: "flex", justifyContent: "center" }}>
+          <div className={styles.bioContainer} style={{ height: "fit-content" }}>
+            <ImUserTie size="25rem" style={{ width: "50%" }} />
+            <h2 className={styles.bio}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit minus excepturi itaque, iste laudantium aspernatur nemo dolor ipsa. Molestias amet voluptate quo ipsam reprehenderit ea omnis pariatur deleniti ad incidunt.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum eaque autem hic qui distinctio commodi veniam, unde est officia necessitatibus, impedit illum eos amet maxime consequatur quaerat temporibus, reiciendis accusamus?
+            </h2>
+          </div>
+        </div>
+
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+          <Technology />
+        </div>
       </main>
+
       <footer className={styles.footer}>
         Thank you for your time and consideration.
       </footer>

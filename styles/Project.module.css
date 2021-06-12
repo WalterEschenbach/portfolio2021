@@ -54,6 +54,7 @@
     border-radius: 10px;
     width: fit-content;
     cursor: pointer;
+    color:black;
   }
   .gitButton:hover .gitIcon {
     background-color: black;
