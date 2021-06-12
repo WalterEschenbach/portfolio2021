@@ -11,8 +11,8 @@ export default function Home() {
 
   const projectDiv = useRef(null)
   useEffect(() => {
-    //console.log('Project Div Height:', projectDivHeight)
-    setProjectDivHeight(projectDiv.current?.scrollHeight * 1.2)
+    console.log('Project Div Height:', window.innerHeight)
+    setProjectDivHeight(projectDiv.current?.scrollHeight + (window.innerHeight * 0.2))
     setWindowWidth(projectDiv.current?.scrollWidth)
   }, [projectDiv.current?.scrollHeight])
 
