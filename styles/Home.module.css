@@ -18,6 +18,9 @@
   align-items: center;
 }
 .projectDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 74vh;
 }
 .downArrow{
@@ -49,6 +52,8 @@
 }
 
 @media only screen and (max-width: 500px){
-
+.projectDiv{
+  border: 1px solid blue;
+}
   
 }
