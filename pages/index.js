@@ -115,7 +115,7 @@ export default function Home() {
         </div>
         <RiArrowDownSLine size="3rem" />
         <div style={{ width: "100%", borderBottom: "1px solid #eaeaea", display: "flex", justifyContent: "center" }}>
-          <div className={styles.bioContainer} style={{ height: "400px", width: "80%" }}>
+          <div className={styles.bioContainer} style={{ height: "fit-content" }}>
             <ImUserTie size="25rem" style={{ width: "50%" }} />
             <h2 className={styles.bio}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit minus excepturi itaque, iste laudantium aspernatur nemo dolor ipsa. Molestias amet voluptate quo ipsam reprehenderit ea omnis pariatur deleniti ad incidunt.
