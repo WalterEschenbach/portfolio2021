@@ -2,9 +2,11 @@ import Head from 'next/head'
 import { useRef, useEffect, useState } from 'react'
 import Project_Container from '../components/Project_Container'
 import Canvas from '../components/Canvas'
+import Intro from '../components/Intro'
+import Profile from '../components/Profile'
 import Technology from '../components/Technology'
 import { RiArrowDownSLine } from 'react-icons/ri'
-import { ImUserTie } from 'react-icons/im'
+import ScrollAnimation from 'react-animate-on-scroll';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,7 +15,6 @@ export default function Home() {
 
   const projectDiv = useRef(null)
   useEffect(() => {
-    console.log('Project Div Height:', window.innerHeight)
     setProjectDivHeight(projectDiv.current?.scrollHeight + (window.innerHeight * 0.2))
     setWindowWidth(projectDiv.current?.scrollWidth)
   }, [projectDiv.current?.scrollHeight])
@@ -88,10 +89,13 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* <F lair /> */}
       <Head>
         <title>Walter Eschenbach</title>
         <link rel="icon" href="/business_suit_icon.svg" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+        />
       </Head>
       {windowWidth < 500 && (
         <Canvas
@@ -100,34 +104,29 @@ export default function Home() {
           height={projectDivHeight}
         />
       )}
-      <Canvas
-        draw={draw}
-        createLines={createLines}
-      />
+      {windowWidth >= 500 && (
+        <Canvas
+          draw={draw}
+          createLines={createLines}
+        />
+      )}
+
       <main className={styles.main}>
-        <div ref={projectDiv} style={{ minHeight: "74vh" }}>
-          <h1 className={styles.title}>Walter Eschenbach</h1>
-          <p className={styles.description}>
-            Web Developer{' '}
-            <code className={styles.code}>view projects...</code>
-          </p>
+        <div ref={projectDiv} className={styles.projectDiv}>
+          <Intro windowWidth={windowWidth} />
           <Project_Container />
         </div>
-        <RiArrowDownSLine size="3rem" />
+        <RiArrowDownSLine className={styles.downArrow} size="3rem" />
         <div style={{ width: "100%", borderBottom: "1px solid #eaeaea", display: "flex", justifyContent: "center" }}>
-          <div className={styles.bioContainer} style={{ height: "fit-content" }}>
-            <ImUserTie size="25rem" style={{ width: "50%" }} />
-            <h2 className={styles.bio}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit minus excepturi itaque, iste laudantium aspernatur nemo dolor ipsa. Molestias amet voluptate quo ipsam reprehenderit ea omnis pariatur deleniti ad incidunt.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum eaque autem hic qui distinctio commodi veniam, unde est officia necessitatibus, impedit illum eos amet maxime consequatur quaerat temporibus, reiciendis accusamus?
-            </h2>
-          </div>
+          <ScrollAnimation animateIn="fadeIn">
+            <Profile />
+          </ScrollAnimation>
         </div>
 
         <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-          <Technology />
+          <ScrollAnimation animateIn="fadeIn">
+            <Technology />
+          </ScrollAnimation>
         </div>
       </main>
 
