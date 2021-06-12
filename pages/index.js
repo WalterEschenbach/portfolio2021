@@ -1,10 +1,20 @@
 import Head from 'next/head'
+import { useRef, useEffect, useState } from 'react'
 import Project_Container from '../components/Project_Container'
 import Canvas from '../components/Canvas'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const [projectDivHeight, setProjectDivHeight] = useState()
+  const [windowWidth, setWindowWidth] = useState()
+
+  const projectDiv = useRef(null)
+  useEffect(() => {
+    //console.log('Project Div Height:', projectDivHeight)
+    setProjectDivHeight(projectDiv.current?.scrollHeight * 1.2)
+    setWindowWidth(projectDiv.current?.scrollWidth)
+  }, [projectDiv.current?.scrollHeight])
 
   function randomPosition(w, h) {
     let x = Math.floor(Math.random() * w) + 1;
@@ -81,12 +91,19 @@ export default function Home() {
         <title>Walter Eschenbach</title>
         <link rel="icon" href="/business_suit_icon.svg" />
       </Head>
+      {windowWidth < 500 && (
+        <Canvas
+          draw={draw}
+          createLines={createLines}
+          height={projectDivHeight}
+        />
+      )}
       <Canvas
         draw={draw}
         createLines={createLines}
       />
       <main className={styles.main}>
-        <div style={{ height: "74vh" }}>
+        <div ref={projectDiv} style={{ minHeight: "74vh" }}>
           <h1 className={styles.title}>Walter Eschenbach</h1>
           <p className={styles.description}>
             Web Developer{' '}
