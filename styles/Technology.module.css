@@ -1,8 +1,13 @@
-.container{
+.techContainer{
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px 0px;
+}
+@media only screen and (max-width: 500px) {
+    .techContainer{
+        width: 100%;
+    }
 }

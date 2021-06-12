@@ -125,7 +125,7 @@ export default function Home() {
 
         <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
           <ScrollAnimation animateIn="fadeIn">
-            <Technology />
+            {windowWidth >= 500 ? <Technology iconSize="7rem" /> : <Technology iconSize="4rem" />}
           </ScrollAnimation>
         </div>
       </main>
