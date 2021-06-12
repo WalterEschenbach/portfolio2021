@@ -5,12 +5,11 @@ import { FaGithub } from 'react-icons/fa'
 function Button(props) {
     return (
         <div className={styles.buttons}>
-            <a className={styles.gitButton} href={props.link}>
+            <a className={styles.gitButton} to={props.link}>
                 <FaGithub className={styles.gitIcon} />
                 <h4>GitHub</h4>
             </a>
         </div>
-
     )
 }
 
