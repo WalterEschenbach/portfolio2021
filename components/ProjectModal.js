@@ -9,7 +9,7 @@ function ProjectModal(props) {
         <>
             <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>{props.title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Woohoo, you're reading this text in a modal!
                     <div>
