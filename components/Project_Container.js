@@ -5,24 +5,24 @@ import { Project } from './project'
 const projects = [
     {
         link: "https://nextjs.org/docs",
-        title: "Tutorial Gel",
-        description: "Find in-depth information about Next.js features and API.",
-        github: "https://github.com/WalterEschenbach/TutorialGel"
+        title: "Day Decider",
+        description: "Full-stack web app for a group to decide what day works best!",
+        github: "https://github.com/WalterEschenbach/DayDecider"
     },
     {
-        link: "https://nextjs.org/learn",
-        title: "Group Trip App",
-        description: 'Learn about Next.js in an interactive course with quizzes!'
+        link: "https://nerf-landing.vercel.app/",
+        title: "Nerf Perks",
+        description: 'Landing page for NERF Perks based on Dr.Pepper Perks!'
     },
     {
-        link: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
-        title: "Code Collab",
-        description: 'Instantly deploy your Next.js site to a public URL with Vercel.'
+        link: "https://romantic-edison-5bc7d1.netlify.app/",
+        title: "Github Battle",
+        description: 'Instantly compare the most popular repositories on GitHub.'
     },
     {
-        link: "#",
-        title: "YouTube Mapper",
-        description: 'Discover and deploy boilerplate example Next.js projects.'
+        link: "https://esch-weather-app.herokuapp.com/",
+        title: "Weather App",
+        description: 'Simple Express JS app that uses multiple api\'s to display the current weather.'
     }
 ]
 
