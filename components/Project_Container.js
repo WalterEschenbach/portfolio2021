@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../styles/Project.module.css'
-import { Project } from './Project'
+import { Project } from './project'
 
 const projects = [
     {
