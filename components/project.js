@@ -15,7 +15,7 @@ export const Project = (props) => {
 
   return (
     <React.Fragment>
-      <ProjectModal handleClose={handleClose} show={show} />
+      <ProjectModal handleClose={handleClose} show={show} link={props.link} title={props.title} />
       <div className={styles.card} onClick={handleShow}>
         <h3>{props.title} &rarr;</h3>
         <p>{props.description}</p>

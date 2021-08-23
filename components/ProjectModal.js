@@ -11,7 +11,12 @@ function ProjectModal(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>Woohoo, you're reading this text in a modal!
+                    <div>
+                        <a href={props.link}>{props.title}</a>
+                    </div>
+
+                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={props.handleClose}>
                         Close
