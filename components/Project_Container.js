@@ -4,20 +4,20 @@ import { Project } from './project'
 
 const projects = [
     {
-        link: "https://nextjs.org/docs",
-        title: "Day Decider",
-        description: "Full-stack web app for a group to decide what day works best!",
-        github: "https://github.com/WalterEschenbach/DayDecider"
-    },
-    {
-        link: "https://nerf-landing.vercel.app/",
-        title: "Nerf Perks",
-        description: 'Landing page for NERF Perks based on Dr.Pepper Perks!'
+        link: "https://github.com/WalterEschenbach/mern-heroku-netlify",
+        title: "Mern-Heroku-Netlify",
+        description: "A template for deploying a full-stack MERN web application on Heroku and Netlify!",
+        github: "https://github.com/WalterEschenbach/mern-heroku-netlify"
     },
     {
         link: "https://romantic-edison-5bc7d1.netlify.app/",
         title: "Github Battle",
         description: 'Instantly compare the most popular repositories on GitHub.'
+    },
+    {
+        link: "https://nerf-landing.vercel.app/",
+        title: "Nerf Perks",
+        description: 'Landing page for NERF Perks based on Dr.Pepper Perks!'
     },
     {
         link: "https://esch-weather-app.herokuapp.com/",
