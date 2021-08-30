@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRef, useEffect, useState } from 'react'
 import Project_Container from '../components/Project_Container'
+import ScrollBar from '../components/ScrollBar'
 import Canvas from '../components/Canvas'
 import Intro from '../components/Intro'
 import Profile from '../components/Profile'
@@ -86,10 +87,10 @@ export default function Home() {
       l.moveLine()
     })
   }
-  useEffect(() => {
-    window.addEventListener('scroll', () => console.log(window.scrollY));
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => console.log(window.scrollY));
 
-  })
+  // })
 
   const scrollDown = () => {
     window.scrollTo(0, 2000)
@@ -97,6 +98,8 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <ScrollBar />
+
       <Head>
         <title>Walter Eschenbach</title>
         <link rel="icon" href="/business_suit_icon.svg" />

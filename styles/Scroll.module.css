@@ -1,0 +1,11 @@
+
+  .progressBar{
+    position: fixed;
+    transform: rotate(90deg); 
+    right: -33vh;
+    top: 50vh;
+    width: 70vh;
+    height: 3px;
+    border-radius: 5px;
+    z-index: 9999;
+  }
