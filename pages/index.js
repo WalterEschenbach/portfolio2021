@@ -98,7 +98,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <ScrollBar />
 
       <Head>
         <title>Walter Eschenbach</title>
@@ -126,6 +125,9 @@ export default function Home() {
           draw={draw}
           createLines={createLines}
         />
+      )}
+      {windowWidth >= 500 && (
+        <ScrollBar />
       )}
 
       <main className={styles.main}>
