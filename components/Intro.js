@@ -11,14 +11,14 @@ function Intro(props) {
                     <p className={styles.description}>
                         Web Developer{' '}
                     </p>
-                    <code className={styles.code}>view projects...</code>
+                    <code className={styles.code}><a src="../public/resume.pdf">view resume<span className={styles.one}>.</span><span className={styles.two}>.</span><span className={styles.three}>.</span></a></code>
                 </>
             )}
             {windowWidth >= 500 && (
                 <>
                     <p className={styles.description}>
                         Web Developer{' '}
-                        <code className={styles.code}>view projects...</code>
+                        <code className={styles.code}><a href="../public/resume.pdf">view resume<span className={styles.one}>.</span><span className={styles.two}>.</span><span className={styles.three}>.</span></a></code>
                     </p>
                 </>
             )}

@@ -23,7 +23,7 @@
   .card:active {
     color: #0070f3;
     border-color: #0070f3;
-    cursor: default;
+    cursor: pointer;
   }
   
   .card h3 {

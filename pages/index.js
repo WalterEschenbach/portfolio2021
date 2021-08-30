@@ -86,6 +86,14 @@ export default function Home() {
       l.moveLine()
     })
   }
+  useEffect(() => {
+    window.addEventListener('scroll', () => console.log(window.scrollY));
+
+  })
+
+  const scrollDown = () => {
+    window.scrollTo(0, 2000)
+  }
 
   return (
     <div className={styles.container}>
@@ -122,7 +130,7 @@ export default function Home() {
           <Intro windowWidth={windowWidth} />
           <Project_Container />
         </div>
-        <RiArrowDownSLine className={styles.downArrow} size="3rem" />
+        <RiArrowDownSLine className={styles.downArrow} size="3rem" onClick={() => scrollDown()} />
         <div style={{ width: "100%", borderBottom: "1px solid #eaeaea", display: "flex", justifyContent: "center" }}>
           <ScrollAnimation animateIn="fadeIn">
             <Profile />
