@@ -18,7 +18,7 @@ function Intro(props) {
                 <>
                     <p className={styles.description}>
                         Web Developer{' '}
-                        <code className={styles.code}><a href="/resume" target="_blank">view resume<span className={styles.one}>.</span><span className={styles.two}>.</span><span className={styles.three}>.</span></a></code>
+                        <a href="/resume" target="_blank"><div className="button">resume</div></a>
                     </p>
                 </>
             )}

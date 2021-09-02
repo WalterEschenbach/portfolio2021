@@ -8,7 +8,7 @@ const Canvas = props => {
     const { height, draw, createLines, ...rest } = props
     const canvasRef = useCanvas(draw, createLines)
 
-    return <canvas id={styles.canvas} ref={canvasRef} style={{ height: height }} {...rest} />
+    return <canvas id={styles.canvas} ref={canvasRef} style={{ height: height, backgroundColor: "#468189" }} {...rest} />
 }
 
 export default Canvas
