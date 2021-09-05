@@ -7,22 +7,41 @@ const projects = [
         link: "https://github.com/WalterEschenbach/mern-heroku-netlify",
         title: "Mern-Heroku-Netlify",
         description: "A template for deploying a full-stack MERN web application on Heroku and Netlify!",
-        github: "https://github.com/WalterEschenbach/mern-heroku-netlify"
+        icon: '/mern-icon.jpg',
+        github: "https://github.com/WalterEschenbach/mern-heroku-netlify",
+        tech: [
+            "React", "MongoDB", "Express", "Node"
+        ]
     },
     {
         link: "https://romantic-edison-5bc7d1.netlify.app/",
         title: "Github Battle",
-        description: 'Instantly compare the most popular repositories on GitHub.'
+        description: 'Instantly compare the most popular repositories on GitHub.',
+        icon: '/github-icon.png',
+        github: "https://github.com/WalterEschenbach/github-battle",
+        tech: [
+            "React", "Netlify"
+        ]
     },
     {
         link: "https://nerf-landing.vercel.app/",
         title: "Nerf Perks",
-        description: 'Landing page for NERF Perks based on Dr.Pepper Perks!'
+        description: 'Landing page for NERF Perks based on Dr.Pepper Perks!',
+        icon: "/nerf-icon.jpg",
+        github: "https://github.com/WalterEschenbach/nerf-landing",
+        tech: [
+            "React", "CSS"
+        ]
     },
     {
         link: "https://esch-weather-app.herokuapp.com/",
         title: "Weather App",
-        description: 'Simple Express JS app that uses multiple api\'s to display the current weather.'
+        description: 'Simple Express JS app that uses multiple api\'s to display the current weather.',
+        icon: '/weather-icon.png',
+        github: "https://github.com/WalterEschenbach/weather-app",
+        tech: [
+            "React", "Netlify", "Heroku"
+        ]
     }
 ]
 
@@ -34,7 +53,14 @@ export default class Project_Container extends Component {
         return (
             <div className={styles.grid}>
                 {projects.map(project => (
-                    <Project link={project.link} title={project.title} key={project.title} description={project.description} githubLink={project.github} />))
+                    <Project
+                        link={project.link}
+                        title={project.title} key={project.title}
+                        description={project.description}
+                        github={project.github}
+                        icon={project.icon}
+                        tech={project.tech}
+                    />))
                 }
             </div>
         )
