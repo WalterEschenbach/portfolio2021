@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import ProjectModal from './ProjectModal'
 import Button from './Button'
 import styles from '../styles/Project.module.css'
+import { FaGithub } from 'react-icons/fa'
+import { FaLink } from 'react-icons/fa'
 
 export const Project = (props) => {
   const [show, setShow] = useState(false)
@@ -26,9 +28,19 @@ export const Project = (props) => {
 
       />
       <div className={styles.card} onClick={handleShow}>
-        <h3>{props.title} &rarr;</h3>
+        <div className={styles.cardTop}>
+          <h3>{props.title} &rarr;</h3>
+          <div className={styles.cardIcons}>
+            <a href={props.link}><FaLink style={{ borderRadius: "100%" }} size={20} /></a>
+            <a href={props.github}><FaGithub style={{ marginLeft: "8px", borderRadius: "100%" }} size={20} /></a>
+
+
+          </div>
+        </div>
         <p>{props.description}</p>
-        {/* <Button link={props.githubLink} /> */}
+        <div style={{ width: "100%", }}>
+          v
+        </div>
       </div>
 
     </React.Fragment>

@@ -150,7 +150,10 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        Thank you for your time and consideration.
+        <div className={styles.footerMain}>
+          Thank you for your time and consideration.
+
+        </div>
       </footer>
     </div>
   )
