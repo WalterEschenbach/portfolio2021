@@ -20,6 +20,7 @@
   align-items: center;
 background-color: white;
 box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+position: relative;
 }
 .projectDiv{
   display: flex;
@@ -42,24 +43,19 @@ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   background: linear-gradient(45deg, #9dbebb,#468189);
 }
 .footerMain{
-  min-width: 1200px; 
+  max-width: 1200px; 
   background-color: #fff;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 100;
 }
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
+.footerMain p{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .logo {
   height: 1em;

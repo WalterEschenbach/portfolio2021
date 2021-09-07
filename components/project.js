@@ -38,9 +38,7 @@ export const Project = (props) => {
           </div>
         </div>
         <p>{props.description}</p>
-        <div style={{ width: "100%", }}>
-          v
-        </div>
+
       </div>
 
     </React.Fragment>

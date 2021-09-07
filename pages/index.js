@@ -151,7 +151,9 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footerMain}>
-          Thank you for your time and consideration.
+          <p style={{ width: "100%" }}>
+            Thank you for your time and consideration.
+          </p>
 
         </div>
       </footer>
