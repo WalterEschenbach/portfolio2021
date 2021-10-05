@@ -143,7 +143,7 @@ export default function Home() {
         </div>
         <RiArrowDownSLine className={styles.downArrow} size="3rem" onClick={() => scrollDown()} />
         <div style={{ width: "100%", borderBottom: "1px solid #eaeaea", display: "flex", justifyContent: "center" }}>
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" style={{display: "flex", justifyContent: "center" }}>
             <Profile />
           </ScrollAnimation>
         </div>
@@ -160,6 +160,7 @@ export default function Home() {
           <p style={{ width: "100%" }}>
             Thank you for your time and consideration.
           </p>
+          <img src="pattern5.svg" alt="pattern5" className={styles.pattern5} />
 
         </div>
       </footer>

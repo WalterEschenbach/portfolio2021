@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/Home.module.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { VscFilePdf } from 'react-icons/vsc'
+import {AiOutlineMail} from 'react-icons/ai'
 
 const Socials = () => {
 
@@ -20,6 +21,12 @@ const Socials = () => {
             <a href="https://www.linkedin.com/in/waltereschenbach">
                 <div className={styles.socialIconContainers}>
                     <FaLinkedin size={30} className={styles.socialIcons} />
+
+                </div>
+            </a>
+            <a href="mailto:eschenbach.walter@gmail.com">
+                <div className={styles.socialIconContainers}>
+                    <AiOutlineMail size={30} className={styles.socialIcons} />
 
                 </div>
             </a>

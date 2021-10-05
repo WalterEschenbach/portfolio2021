@@ -8,7 +8,8 @@ import { FaLink } from 'react-icons/fa'
 export const Project = (props) => {
   const [show, setShow] = useState(false)
 
-  const handleShow = () => {
+  const handleShow = (e) => {
+    console.log('e.target:',e.target)
     setShow(true)
   }
   const handleClose = () => {
