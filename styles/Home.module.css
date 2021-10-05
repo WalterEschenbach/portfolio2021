@@ -20,6 +20,7 @@
   align-items: center;
 background-color: white;
 box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+position: relative;
 }
 .projectDiv{
   display: flex;
@@ -42,31 +43,60 @@ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   background: linear-gradient(45deg, #9dbebb,#468189);
 }
 .footerMain{
-  min-width: 1200px; 
+  max-width: 1200px; 
   background-color: #fff;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 100;
 }
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
+.footerMain p{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .logo {
   height: 1em;
 }
+.socials{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 0;
+  margin-right: 5rem;
+  top: 1rem;
+}
+.socialIconContainers{
+  margin-bottom: .5rem; 
+  width: fit-content; 
+  border-radius: 100%; 
+  padding: .5rem; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: fit-content; 
+  background-color: #4C4E52; 
+}
+.socialIcons{
+color: white;
+}
+.socialIconContainers:hover{
+  background: linear-gradient(45deg, #9dbebb,#468189);
+}
+.socialIcons:hover{
+
+}
 
 @media only screen and (max-width: 500px){
-/* .projectDiv{
-} */
+.socialIcons{
+
+}
   
 }

@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Project_Container from '../components/Project_Container'
 import ScrollBar from '../components/ScrollBar'
 import Canvas from '../components/Canvas'
 import Intro from '../components/Intro'
 import Profile from '../components/Profile'
 import Technology from '../components/Technology'
+import Socials from '../components/Socials'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import ScrollAnimation from 'react-animate-on-scroll';
 import styles from '../styles/Home.module.css'
@@ -127,11 +128,16 @@ export default function Home() {
         />
       )}
       {windowWidth >= 500 && (
-        <ScrollBar />
+        <React.Fragment>
+          <ScrollBar />
+        </React.Fragment>
+
       )}
 
       <main className={styles.main}>
+        <Socials />
         <div ref={projectDiv} className={styles.projectDiv}>
+
           <Intro windowWidth={windowWidth} />
           <Project_Container />
         </div>
@@ -151,7 +157,9 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footerMain}>
-          Thank you for your time and consideration.
+          <p style={{ width: "100%" }}>
+            Thank you for your time and consideration.
+          </p>
 
         </div>
       </footer>

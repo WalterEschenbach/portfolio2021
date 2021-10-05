@@ -40,41 +40,36 @@
     font-size: 1.25rem;
     line-height: 1.5;
   }
+  .projectButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .projectButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    background-color: #4C4E52;
+    border-radius: 10px;
+    width: 40%;
+    margin: 5px;
+  }
+  .projectButton:hover{
+    background:  linear-gradient(45deg, #9dbebb,#468189);
+  }
+  .projectButton p{
+    width: fit-content;
+  }
   .buttons{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
   }
-  .gitButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 1.5em;
-    background-color:  transparent;
-    padding: 5px;
-    border: 2px solid black; 
-    border-radius: 10px;
-    width: fit-content;
-    cursor: pointer;
-    color:black;
-  }
-  .gitButton:hover .gitIcon {
-    background-color: black;
-    color: white;
-  }
-  .gitButton:hover h4 {
-    background-color: black;
-    color: white;
-  }
-  .gitButton:hover {
-    background-color: black;
-    color: white;
-  }
-  .gitButton h4{
-    padding-left: 3px;
-  }
+
 
 
 

@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from '../styles/Intro.module.css'
+import { FiExternalLink } from 'react-icons/fi'
 
 function Intro(props) {
     const { windowWidth } = props;
+
     return (
         <>
             <h1 className={styles.title}>Walter Eschenbach</h1>
@@ -18,7 +20,6 @@ function Intro(props) {
                 <>
                     <p className={styles.description}>
                         Web Developer{' '}
-                        <a href="/resume" target="_blank"><div className="button">resume</div></a>
                     </p>
                 </>
             )}
