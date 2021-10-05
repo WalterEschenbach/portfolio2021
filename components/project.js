@@ -30,15 +30,18 @@ export const Project = (props) => {
       <div className={styles.card} onClick={handleShow}>
         <div className={styles.cardTop}>
           <h3>{props.title} &rarr;</h3>
-          <div className={styles.cardIcons}>
-            <a href={props.link}><FaLink style={{ borderRadius: "100%" }} size={20} /></a>
-            <a href={props.github}><FaGithub style={{ marginLeft: "8px", borderRadius: "100%" }} size={20} /></a>
-
-
-          </div>
         </div>
-        <p>{props.description}</p>
-
+        <p style={{ cursor: "default" }}>{props.description}</p>
+        <div className={styles.projectButtonContainer}>
+          <button className={styles.projectButton}>
+            <FaLink style={{ margin: "2px" }} size={20} />
+            <p>Website</p>
+          </button>
+          <button className={styles.projectButton}>
+            <FaGithub style={{ margin: "2px 2px" }} size={20} />
+            <p style={{ margin: "2px 2px" }}>Github</p>
+          </button>
+        </div>
       </div>
 
     </React.Fragment>
