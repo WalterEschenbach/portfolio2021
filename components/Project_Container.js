@@ -6,7 +6,7 @@ const projects = [
     {
         link: "https://github.com/WalterEschenbach/mern-heroku-netlify",
         title: "Mern-Heroku-Netlify",
-        description: "A template for deploying a full-stack MERN web application on Heroku and Netlify!",
+        description: "Template to deploy a MERN web application on Heroku and Netlify!",
         icon: '/mern-icon.jpg',
         github: "https://github.com/WalterEschenbach/mern-heroku-netlify",
         tech: [
@@ -36,7 +36,7 @@ const projects = [
     {
         link: "https://esch-weather-app.herokuapp.com/",
         title: "Weather App",
-        description: 'Simple Express JS app that uses multiple api\'s to display the current weather.',
+        description: 'Express JS app that uses multiple api\'s to display the weather.',
         icon: '/weather-icon.png',
         github: "https://github.com/WalterEschenbach/weather-app",
         tech: [
