@@ -54,14 +54,17 @@ export default class Project_Container extends Component {
             <div className={styles.grid}>
                 {projects.map(project => (
                     <Project
-                        link={project.link}
-                        title={project.title} key={project.title}
-                        description={project.description}
-                        github={project.github}
-                        icon={project.icon}
-                        tech={project.tech}
+                    link={project.link}
+                    title={project.title} key={project.title}
+                    description={project.description}
+                    github={project.github}
+                    icon={project.icon}
+                    tech={project.tech}
                     />))
                 }
+                <img src="pattern1.svg" alt="pattern1" className={styles.pattern1} />
+                <img src="pattern2.svg" alt="pattern2" className={styles.pattern2} />
+                <img src="pattern3.svg" alt="pattern3" className={styles.pattern3} />
             </div>
         )
     }

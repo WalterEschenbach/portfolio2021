@@ -5,13 +5,18 @@ import { ImUserTie } from 'react-icons/im'
 function Profile() {
     return (
         <div className={styles.bioContainer} style={{ height: "fit-content" }}>
-            <ImUserTie size="25rem" style={{ width: "50%" }} />
-            <h2 className={styles.bio}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit minus excepturi itaque, iste laudantium aspernatur nemo dolor ipsa. Molestias amet voluptate quo ipsam reprehenderit ea omnis pariatur deleniti ad incidunt.
+            <ImUserTie size="25rem" md={4} />
+            <h5 className={styles.bio} md={8}>
+                {`Hello, my name is Walter Eschenbach. I am a web developer with more than 2 years of experience developing with JavaScript and its many frameworks, libraries, and other web technologies. `}
                 <br />
                 <br />
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum eaque autem hic qui distinctio commodi veniam, unde est officia necessitatibus, impedit illum eos amet maxime consequatur quaerat temporibus, reiciendis accusamus?
-            </h2>
+               {`I started my career in the world of finance & Consulting and have five years of professional experience in that arena (most recently at Deloitte Consulting). I'm passionate about web development and am currently seeking opportunities to join a new dev team!`}
+                <br />
+                <br />
+               {`Please see examples of my work above - if you have any questions, or if there is any additional information I can provide, or if you would simply like to connect... there are links to socials on the right side of the page above. Thank you!`}
+            </h5>
+            <img src="pattern4.svg" alt="pattern4" className={styles.pattern4} />
+
         </div>
     )
 }
