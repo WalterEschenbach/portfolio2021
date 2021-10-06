@@ -62,15 +62,17 @@
 	right: -20rem;
 	z-index: 200;
 	display: flex;
+	flex-direction: column;
 	border: none;
 	background-color: #4c4e52;
-	border-radius: 5px 0 0 5px;
+	border-radius: 10px 0 0 10px;
 	/* transition: transform; */
 }
 
 .active {
 	top: 0;
 	animation: slideLeft 0.25s ease-in forwards;
+	overflow-y: hidden;
 }
 
 @keyframes slideLeft {
@@ -80,4 +82,27 @@
 	to {
 		transform: translateX(-19rem);
 	}
+}
+
+.item {
+	flex-grow: 1;
+	width: 100%;
+	border: 1px solid white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.item:active {
+	text-decoration: none;
+	color: #4c4e52;
+}
+.item:focus {
+	text-decoration: none;
+	color: white;
+}
+.item:visited {
+	text-decoration: none;
+	color: white;
 }
