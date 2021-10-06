@@ -23,10 +23,10 @@ const MobileNav = () => {
             <nav className={opened
              ?styles.navcontainer
              :`${styles.navcontainer} ${styles.active}`}>
-                <div className={styles.resume}></div>
-                <div className={styles.email}></div>
-                <div className={styles.linkedin}></div>
-                <div className={styles.github}></div>
+                <a href="/resume" className={styles.item}><h3>Resume</h3></a>
+                <a href="https://github.com/WalterEschenbach" className={styles.item}><div ><h3>Github</h3></div></a>
+                <a href="https://www.linkedin.com/in/waltereschenbach" className={styles.item}><div ><h3>LinkedIn</h3></div></a>
+                <a href="mailto:eschenbach.walter@gmail.com" className={styles.item}><div ><h3>Email</h3></div></a>
             </nav>
         </React.Fragment>
     )

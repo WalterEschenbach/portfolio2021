@@ -18,7 +18,7 @@ export const Project = (props) => {
 
   return (
     <React.Fragment>
-      <ProjectModal
+      {/* <ProjectModal
         handleClose={handleClose}
         show={show} link={props.link}
         title={props.title}
@@ -27,21 +27,21 @@ export const Project = (props) => {
         tech={props.tech}
         description={props.description}
 
-      />
+      /> */}
       <div className={styles.card} onClick={handleShow}>
         <div className={styles.cardTop}>
           <h3>{props.title} &rarr;</h3>
         </div>
         <p style={{ cursor: "default" }}>{props.description}</p>
         <div className={styles.projectButtonContainer}>
-          <button className={styles.projectButton}>
+          <a href={props.link} className={styles.projectButton}>
             <FaLink style={{ margin: "2px" }} size={20} />
             <p>Website</p>
-          </button>
-          <button className={styles.projectButton}>
+          </a>
+          <a href={props.github} className={styles.projectButton}>
             <FaGithub style={{ margin: "2px 2px" }} size={20} />
             <p style={{ margin: "2px 2px" }}>Github</p>
-          </button>
+          </a>
         </div>
       </div>
 
