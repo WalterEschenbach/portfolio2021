@@ -114,6 +114,7 @@ export default function Home() {
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
           crossOrigin="anonymous"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
       {windowWidth < 500 && (
         <>
@@ -155,7 +156,7 @@ export default function Home() {
 
         <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
           <ScrollAnimation animateIn="fadeIn" style={{ display: "flex", justifyContent: "center" }}>
-            {windowWidth >= 500 ? <Technology iconSize="7rem" /> : <Technology iconSize="3rem" />}
+            {windowWidth >= 500 ? <Technology iconSize="7rem" /> : <Technology iconSize="2.5rem" />}
           </ScrollAnimation>
         </div>
       </main>

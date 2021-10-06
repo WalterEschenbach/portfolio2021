@@ -5,8 +5,8 @@ const MobileNav = () => {
     const [opened, setOpened] = useState(true)
     const [buttonClass, setButtonClass] = useState(styles.menu)
 
-    const handleClick = () =>{
-        setOpened(!opened)
+    const handleClick = async () =>{
+        await setOpened(!opened)
         const currentClass = opened?`${styles.menu} ${styles.opened}`:styles.menu
         setButtonClass(currentClass)
     }
@@ -20,7 +20,9 @@ const MobileNav = () => {
                     <path className={`${styles.line} ${styles.line3}`} d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                 </svg>
             </button>
-            <nav className={opened?styles.navcontaineractive:styles.navcontainer}>
+            <nav className={opened
+             ?styles.navcontainer
+             :`${styles.navcontainer} ${styles.active}`}>
                 <div className={styles.resume}></div>
                 <div className={styles.email}></div>
                 <div className={styles.linkedin}></div>

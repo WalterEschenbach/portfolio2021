@@ -6,7 +6,7 @@
 
 .menu {
 	cursor: pointer;
-	position: absolute;
+	position: fixed;
 	height: 2.5rem;
 	width: 2.5rem;
 	z-index: 999;
@@ -56,22 +56,21 @@
 }
 .navcontainer {
 	height: 100vh;
-	width: 70%;
-	position: absolute;
+	width: 20rem;
+	position: fixed;
 	top: 0;
-	right: 0;
+	right: -20rem;
 	z-index: 200;
-	border: 1px solid black;
 	display: flex;
-	justify-content: flex-end;
-	background-color: white;
 	border: none;
 	background-color: #4c4e52;
 	border-radius: 5px 0 0 5px;
+	/* transition: transform; */
 }
 
-.navcontaineractive {
-	animation: slideLeft 3s ease-in;
+.active {
+	top: 0;
+	animation: slideLeft 0.25s ease-in forwards;
 }
 
 @keyframes slideLeft {
@@ -79,6 +78,6 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(70%);
+		transform: translateX(-19rem);
 	}
 }

@@ -6,6 +6,7 @@ body {
 	/* overflow-x: hidden; */
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	min-height: 100vh;
 }
 ::-webkit-scrollbar {
 	width: 0px;
@@ -26,7 +27,9 @@ A24936
 9999A1
 */
 @media only screen and (max-width: 500px) {
+	html,
 	body {
 		overflow-x: hidden;
+		margin: 0;
 	}
 }
