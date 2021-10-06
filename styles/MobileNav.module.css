@@ -1,0 +1,84 @@
+.svg {
+	height: 100%;
+	width: 100%;
+	border: none;
+}
+
+.menu {
+	cursor: pointer;
+	position: absolute;
+	height: 2.5rem;
+	width: 2.5rem;
+	z-index: 999;
+	top: 1rem;
+	right: 1rem;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: none;
+}
+.line {
+	fill: none;
+	stroke: black;
+	stroke-width: 6;
+
+	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+.line2 {
+	stroke-dasharray: 60 60;
+	stroke-width: 6;
+}
+.line3 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+.opened .line1 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
+}
+.opened .line2 {
+	stroke-dasharray: 1 60;
+	stroke-dashoffset: -30;
+	stroke-width: 6;
+}
+.opened .line3 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
+}
+.navcontainer {
+	height: 100vh;
+	width: 70%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	border: 1px solid black;
+	display: flex;
+	justify-content: flex-end;
+	background-color: white;
+	border: none;
+	background-color: #4c4e52;
+	border-radius: 5px 0 0 5px;
+}
+
+.navcontaineractive {
+	animation: slideLeft 3s ease-in;
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(70%);
+	}
+}

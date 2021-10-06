@@ -7,6 +7,7 @@ import Intro from '../components/Intro'
 import Profile from '../components/Profile'
 import Technology from '../components/Technology'
 import Socials from '../components/Socials'
+import MobileNav from '../components/MobileNav'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import ScrollAnimation from 'react-animate-on-scroll';
 import styles from '../styles/Home.module.css'
@@ -115,11 +116,15 @@ export default function Home() {
         />
       </Head>
       {windowWidth < 500 && (
+        <>
         <Canvas
           draw={draw}
           createLines={createLines}
           height={projectDivHeight}
         />
+        <MobileNav/>
+        </>
+        
       )}
       {windowWidth >= 500 && (
         <Canvas

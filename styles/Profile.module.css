@@ -25,4 +25,7 @@
 		flex-direction: column;
 		width: 100%;
 	}
+	.bio {
+		width: 85%;
+	}
 }
